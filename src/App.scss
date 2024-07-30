@@ -13,8 +13,11 @@
     border-radius: 20px;
     background: #66496d;
     border: 1px solid #ffffff80;
+
     position: relative;
     overflow: hidden;
+    z-index: 1;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,6 +46,7 @@
     margin-top: 55px;
     position: relative;
     z-index: 1;
+
     display: flex;
     justify-content: center;
 
@@ -50,6 +54,10 @@
       width: 90%;
       max-height: 50vh;
       cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .fruit:focus:not(:focus-visible) {
+      outline: none;
     }
     .blobEffect {
       position: absolute;
@@ -66,6 +74,31 @@
         line-height: 41.41px;
         text-align: center;
       }
+      .blob {
+        width: 33vw;
+      }
+    }
+    .notEnoughEnergy {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .label {
+        width: fit-content;
+        height: 40px;
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: #ffffff80;
+        font-family: "Qanelas";
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        color: #c00204;
+      }
+      // z-index: 1;
     }
   }
 
@@ -109,33 +142,65 @@
   }
 
   .blob_primary {
-    width: 624.77px;
-    height: 461.98px;
+    width: 100%;
     position: absolute;
     top: 308px;
-    left: -117.83px;
-    gap: 0px;
-    opacity: 0px;
+    left: 0px;
   }
   .ellipse1 {
-    width: 283.33px;
-    height: 415.32px;
+    width: 72.65%;
     position: absolute;
     top: 0px;
-    left: -108px;
+    left: 0px;
   }
   .ellipse2 {
-    width: 287px;
+    width: 73.59%;
     height: 87px;
     position: absolute;
     top: 150px;
-    left: 51px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .ellipse3 {
-    width: 249px;
-    height: 365px;
+    width: 63.85%;
     position: absolute;
-    top: 571.93px;
-    left: 170px;
+    bottom: 0px;
+    right: 0px;
+  }
+  .loaderWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .loader {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      border: 2px solid #ff3d00;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+    }
+    .loader::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      border: 2px solid #fff;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
