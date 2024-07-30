@@ -1,0 +1,141 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  padding: 64px 22px;
+  background: #22001b;
+  position: relative;
+  overflow: hidden;
+
+  .coinsWrapper {
+    width: 100%;
+    height: 93px;
+    padding: 19px;
+    border-radius: 20px;
+    background: #66496d;
+    border: 1px solid #ffffff80;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .coins {
+      font-family: "Japanese 3017";
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 55.22px;
+      text-align: center;
+
+      z-index: 1;
+    }
+    .blob_secondary {
+      width: 186.26px;
+      height: 168.04px;
+      top: -36px;
+      right: 0px;
+      position: absolute;
+    }
+  }
+
+  .fruitWrapper {
+    width: 100%;
+    margin-top: 55px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+
+    .fruit {
+      width: 90%;
+      max-height: 50vh;
+      cursor: pointer;
+    }
+    .blobEffect {
+      position: absolute;
+      z-index: 2;
+      pointer-events: none;
+      .plusCoins {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Japanese 3017";
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 41.41px;
+        text-align: center;
+      }
+    }
+  }
+
+  .energyWrapper {
+    margin-top: 7px;
+    position: relative;
+    z-index: 1;
+
+    .percent {
+      margin: 0px 15px;
+      font-family: "Qanelas";
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14.48px;
+      text-align: left;
+    }
+    .progress {
+      width: 120px;
+      height: 30px;
+      margin-top: 10px;
+      background: #22001b;
+      border-radius: 38px;
+      overflow: hidden;
+      .bar {
+        height: 100%;
+        padding: 8px;
+        background: linear-gradient(
+          91.7deg,
+          #ff6e05 0%,
+          #f83c27 99.37%
+        );
+        .amount {
+          font-family: "Qanelas";
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 14.48px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .blob_primary {
+    width: 624.77px;
+    height: 461.98px;
+    position: absolute;
+    top: 308px;
+    left: -117.83px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  .ellipse1 {
+    width: 283.33px;
+    height: 415.32px;
+    position: absolute;
+    top: 0px;
+    left: -108px;
+  }
+  .ellipse2 {
+    width: 287px;
+    height: 87px;
+    position: absolute;
+    top: 150px;
+    left: 51px;
+  }
+  .ellipse3 {
+    width: 249px;
+    height: 365px;
+    position: absolute;
+    top: 571.93px;
+    left: 170px;
+  }
+}

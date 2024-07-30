@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: "Japanese 3017";
+  src: url(/font/Japanese3017/Japanese3017.ttf)
+      format("truetype"),
+    url(/font/Japanese3017/Japanese3017.otf)
+      format("opentype");
+}
+
+@font-face {
+  font-family: "Qanelas";
+  src: url(/font/qanelas/QanelasBlack.otf)
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
