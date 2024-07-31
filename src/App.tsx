@@ -128,7 +128,7 @@ function App() {
         Object.values(event.touches).map(
           (touch, index) => {
             return {
-              value: index + 1,
+              value: clickCount + (index + 1),
               icon: touchEffect[
                 Math.floor(Math.random() * 2)
               ],
